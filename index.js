@@ -3,10 +3,13 @@ var inquirer = require("inquirer");
 var generateMarkdown = require("./utils/generateMarkdown");
 var axios = require("axios");
 var fs = require("fs");
+var util = require('util')
+
+const writeFileAsync = util.promisify(fs.writeFile);
+
 
 // Require all npm packages and files
 function promptUser() {
-
   inquirer.prompt([
     // questions to user using "inquirer"
     {
@@ -49,6 +52,20 @@ function promptUser() {
       name: "email",
       default: "neal.g.gerber@gmail.com"
     },
-  ]);
+  ]).then(response => {
+    
+    let md = generateMarkdown(response)
+    console.log(md)
+    fs.writeFile("README.md", md, function(err) {
+      console.log(success)
+
+    })
+
+
+  })
 }
+
+promptUser() 
+
+
 
