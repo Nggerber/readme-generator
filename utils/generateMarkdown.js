@@ -5,6 +5,8 @@ function generateMarkdown(data) {
 
     #${data.projectTitle};
 
+    
+
 
 
 ${data.description}
@@ -19,7 +21,7 @@ ${data.description}
 
 ## License
 
-This project is licensed by [${data.license}](${data.printLicense})
+This project is licensed by [${data.license}]
 
 
 ## Questions

@@ -27,6 +27,34 @@ function promptUser() {
     },
 
     {
+      type: 'input',
+      message: 'What are the steps to install your application?',
+      name: 'install',
+      default: ' Run npm i for inquirer and axios.'
+    },
+
+    {
+      type: 'usage',
+      message: 'How to I use your application',
+      name: 'usage',
+      default: 'Open up integrated terminal for index.js. Enter "node index.js" and answer the prompts.'
+    },
+
+    {
+      type: 'input',
+      message: 'Did you have any contributing members for this project',
+      name: 'contributing',
+      default: 'Me, myself and I'
+    },
+
+    {
+      type: 'input',
+      message: 'Did you use any tests',
+      name: 'tests',
+      default: 'None'
+    },
+
+    {
       type: "checkbox",
       message: "Choose a license for your project",
       name: "license",
@@ -52,11 +80,11 @@ function promptUser() {
       name: "email",
       default: "neal.g.gerber@gmail.com"
     },
+
   ]).then(response => {
-    
+
     let md = generateMarkdown(response)
-    console.log(md)
-    fs.writeFile("README.md", md, function(err) {
+    fs.writeFile("README.md", md, function (err) {
       console.log(success)
 
     })
@@ -65,7 +93,7 @@ function promptUser() {
   })
 }
 
-promptUser() 
+promptUser()
 
 
 
