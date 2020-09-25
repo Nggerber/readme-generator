@@ -26,6 +26,7 @@ function promptUser() {
       default: "When you enter the title description and repository name this application creates a README.md"
     },
 
+
     {
       type: 'input',
       message: 'What are the steps to install your application?',
@@ -59,10 +60,10 @@ function promptUser() {
       message: "Choose a license for your project",
       name: "license",
       choices: [
-        "jjhuj",
-        "dsfhdfhdjf",
-        "djfbdjhfjdh",
-        'djfhdjhfdjhf',
+        "MIT",
+        "Mozilla",
+        "Zlib",
+        'Apache',
       ],
       default: "GoodREADMEGenerator"
     },
@@ -85,7 +86,7 @@ function promptUser() {
 
     let md = generateMarkdown(response)
     fs.writeFile("README.md", md, function (err) {
-      console.log(success)
+      console.log('success')
 
     })
 

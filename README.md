@@ -1,13 +1,10 @@
-// function to generate markdown for README
-function generateMarkdown(data) {
 
-  return `
 
-#${data.projectTitle}
+#Readme Generator
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-${data.description}
+When you enter the title description and repository name this application creates a README.md
 
 
 
@@ -22,31 +19,28 @@ ${data.description}
 
 ##Installation
 
-${data.install}
+ Run npm i for inquirer and axios.
 
 ##Usage
 
-${data.usage}
+Open up integrated terminal for index.js. Enter "node index.js" and answer the prompts.
 
 ##Contributing
 
-${data.contributing}
+Me, myself and I
 
 ##Tests
 
-${data.tests}
+None
 
 ## License
 
-This project is licensed by [${data.license}]
+This project is licensed by []
 
 ## Questions
 
-[Github profile](https://github.com/${data.userName})
+[Github profile](https://github.com/Nggerber)
 
-[E-Mail]Mail to:${data.email})
+[E-Mail]Mail to:neal.g.gerber@gmail.com)
   
-  `;
-}
-
-module.exports = generateMarkdown;
+  
