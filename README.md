@@ -1,6 +1,6 @@
 
 
-#Readme Generator
+## Readme Generator
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
@@ -17,19 +17,19 @@ When you enter the title description and repository name this application create
   - [License](#License)
   - [Questions](#Questions)
 
-##Installation
+## Installation
 
  Run npm i for inquirer and axios.
 
-##Usage
+## Usage
 
 Open up integrated terminal for index.js. Enter "node index.js" and answer the prompts.
 
-##Contributing
+## Contributing
 
 Me, myself and I
 
-##Tests
+## Tests
 
 None
 
