@@ -1,4 +1,4 @@
-#### Readme Generator
+###### Readme Generator
 
 This application was developed to create a professional and concise readme with information given by a user. The app uses node to ask the user a series of questions and then builds a professional readme.
 
