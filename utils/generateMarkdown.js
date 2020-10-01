@@ -5,7 +5,7 @@ function generateMarkdown(data) {
 
 ## ${data.projectTitle}
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+${data.license}
 
 ${data.description}
 
@@ -38,7 +38,7 @@ ${data.tests}
 
 ## License
 
-This project is licensed by [${data.license}]
+This project is licensed by ${data.license}
 
 ## Questions
 

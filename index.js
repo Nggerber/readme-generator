@@ -60,10 +60,11 @@ function promptUser() {
       message: "Choose a license for your project",
       name: "license",
       choices: [
-        "MIT",
-        "Mozilla",
-        "Zlib",
-        'Apache',
+        {name: "MIT", value: "[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)"},
+        {name: "Mozilla", value: "[![License: MPL 2.0](https://img.shields.io/badge/License-MPL%202.0-brightgreen.svg)](https://opensource.org/licenses/MPL-2.0)"},
+        {name: "Zlib",  value: "[![License: Zlib](https://img.shields.io/badge/License-Zlib-lightgrey.svg)](https://opensource.org/licenses/Zlib)"},
+        {name: 'Apache', value: "[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)"},
+        {name: "None"}
       ],
       default: "GoodREADMEGenerator"
     },
@@ -86,6 +87,7 @@ function promptUser() {
 
     let md = generateMarkdown(response)
     fs.writeFile("README.md", md, function (err) {
+      console.log(response)
       console.log('success')
 
     })
